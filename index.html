@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jemila Seto">
+    <meta name="description" content="Tipsy Cat Lemon Tea by Homeshake. Sip, savour and enjoy!">
+    <meta name="keywords" content="Tipsy Cat Lemon Tea, Homeshake, RTD cocktails, Alcohol">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Fullpage js  css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Shoelace-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.10.0/cdn/themes/light.css" />
+    <!-- Swiper CDN CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <!-- my css style sheet-->
+    <link rel="stylesheet" href="styles.css">
+    <title>Tipsy Lemon Tea - By Homeshake</title>
+
+  </head>
+
+  <body>
+
+<!-- Loading page  //////////////////////////// -->
+    <div class="opening_section">
+      <div class="typing_container">
+        <span class="text first_text">Fresh</span>
+      </div>
+      <div class="bg"></div>
+    </div>
+
+<!-- Navigation //////////////////////////////  -->
+    <div class="navigation">
+      <sl-icon-button name="list" class="hamburger-btn"></sl-icon-button>
+      <ul class="menu">
+        <li> <a class="nav_btn" id="what_is_tipsy_lemon_tea" href="#">What is Tipsy Lemon Tea?</a> </li>
+        <li> <a class="nav_btn" id="ingredients" href="#">Ingredients</a> </li>
+        <li> <a class="nav_btn" id="about_us" href="#">About Us</a> </li>
+        <li> <a class="nav_btn" id="order_now" href="#">Order Now</a> </li>
+      </ul>
+    </div>
+    
+<!-- Fullpage content starts -->
+    <div id="fullpage">
+
+<!-- Hero Section - Section 1 //////////////////////////////////////// -->
+      <div class="section section_one" id="one">
+
+        <!-- Hero Image -->
+        <div class="container">
+         <div class="hero_img_container">
+           <div class="mask">
+              <img src="media/tipsy_closeup.jpg" class="img" id="hero_img" alt="Close up of Tipsy Lemon Tea Glass Bottle">
+            </div>
+          </div>
+        </div>
+
+        <!-- Scrolling Text =============================== -->
+        <div class="scrolling_text_container">
+          <div class='scroll_container' id="scroll_one">
+            <h1 class="cnnContents">
+                <span class="marqueeStyle">&nbsp;TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA&nbsp;</span>
+                <!-- duplicate above, change style to allow continous scroll -->
+                <span class="marqueeStyle2">&nbsp;TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA&nbsp;</span>
+            </h1>
+          </div>
+    
+          <div class='scroll_container' id="scroll_two">
+            <h1 class="cnnContents">
+                <span class="marqueeStyle">&nbsp;TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA&nbsp;</span>
+                <!-- duplicate above, change style to allow continous scroll -->
+                <span class="marqueeStyle2">&nbsp;TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA TIPSY CAT LEMON TEA&nbsp;</span>
+            </h1>
+          </div>
+        </div>
+         <!-- Scrolling Text END ========================= -->
+
+         <!-- Bottle -->
+          <div class="bottle_container">
+            <img src="media/tipsy_bottle.png" class="img tipsy_bottle_img" alt="Photo of Tipsy Lemon Tea Bottle with Transparent Background">
+          </div>
+          <div class="hover_area">
+            <sl-button class="order_btn order_btn_hero" outline>Order Now</sl-button>
+          </div>
+      </div>
+<!-- END (Hero Section - Section 1) //////////////////////////////////////// -->
+      
+<!-- Quote Section - Section 2 ///////////////////////////////////////////// -->
+      <div class="section section_two" id="two">
+        <div class="bg">
+          <sl-animation class="fade_one" name="fadeIn" easing="ease-in-out" duration="2000" iterations="1" >
+            <img class="grid" src="media/grid.jpg" alt="Background Grid">
+          </sl-animation>
+          <img class="quotations" src="media/quotations.png" alt="Square Quotation Marks">
+        </div>
+
+        <div class="quote">
+          <h2 id="split_one">
+            The <span>ingenious</span> and
+          </h2>
+          <h2 id="split_two">
+            novel cocktail
+          </h2>
+          <h2 id="split_three">
+            experience for every
+          </h2>
+          <h2 id="split_four">
+            occasion
+          </h2>
+        </div>
+      </div>
+<!-- END (Quote Section - Section 2) //////////////////////////////////////// -->
+
+<!-- Video Section - Section 3 ////////////////////////////////////////////// -->
+      
+      <div class="section section_three fp-auto-height">
+        <!-- Pour Video ======================================= -->
+        <div class="video_container">
+          <!-- Audio can be played unmuted if Autoscroll is true (on)-->
+          <video src="./media/pour_video.mp4" id="video" loop muted data-autoplay></video> <!-- Plays when section is entered -->
+        </div>
+        <!-- END (Pour Video) ======================================= -->
+        <!-- Scrub Keywords 1 ===================================== -->
+        <div class="keywords_outer_wrapper">
+          <div class="keywords_container">
+            <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+            </svg>
+
+            <p>Iconic</p>
+
+            <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+            </svg>
+
+            <p>Innovative</p>
+
+            <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+            </svg>
+
+            <p>Novel</p>
+
+            <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+            </svg>
+
+            <p>Original</p>
+
+            <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+            </svg>
+
+            <p>Popular</p>
+
+            <svg class="asterisk" width="4vw" height="4vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+            </svg>
+
+            <p>Delicious</p>
+          </div>
+        </div>
+        <!-- END (Scrub Keywords 1) ===================================== -->
+      </div>
+<!-- END (Video Section - Section 3) //////////////////////////////////////// -->
+      
+<!-- Info Section - Section 4 /////////////////////////////////////////////// -->
+      <div class="section section_four fp-auto-height">
+        <!-- Information divs-->
+        <div class="row row_one">
+          <div class="info_container info_container_one">
+            <svg class="square_point" width="2vw" height="2vw" viewBox="0 0 162 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="rectangle" d="M161.093 28.9071L0.907622 28.907L0.907447 0.499878L161.093 0.5L161.093 28.9071Z" fill="#FDB800"/>
+            </svg>
+            <div class="p_mask">
+              <p class="info">Lemon tea has always been a <span>staple favourite</span> beverage amongst Hong Kongers, omnipresent <br>in a myriad of eateries.</p>
+           </div>
+          </div>
+        </div>
+
+        <div class="row row_two">
+          <div class="info_container info_container_two">
+            <svg class="square_point" width="2vw" height="2vw" viewBox="0 0 162 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="rectangle" d="M161.093 28.9071L0.907622 28.907L0.907447 0.499878L161.093 0.5L161.093 28.9071Z" fill="#FDB800"/>
+            </svg>
+            <div class="p_mask">
+              <p class="info"><span>Tipsy Lemon Tea</span> is a one-of-a-kind cocktail concocted by homeshake, distilled from Chinese tea leaves and characterised by a harmonising balance of zest and sweetness.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row_three">
+          <div class="info_container info_container_three">
+            <svg class="square_point" width="2vw" height="2vw" viewBox="0 0 162 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="rectangle" d="M161.093 28.9071L0.907622 28.907L0.907447 0.499878L161.093 0.5L161.093 28.9071Z" fill="#FDB800"/>
+            </svg>
+            <div class="p_mask">
+              <p class="info">The 7% alcohol content is perfected via multiple mixology procedures and fastidious tasting, thereby inducing a <span>proper Hong Kong style cocktail.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- END (Info Section - Section 4) //////////////////////////////////////// -->
+      
+<!-- Ingredients Section - Section 5 //////////////////////////////////////// -->
+      <div class="section section_five fp-auto-height">
+        <div class="ingred_container">
+          <div class="ingred_column ingred_column_one">
+            <div id="div1" class="clickable_div">
+              <h3>Lemon</h3>
+            </div>
+            <div id="div2" class="clickable_div">
+              <h3>Oolong Tea</h3>
+            </div>
+          </div>
+      
+          <div class="ingred_column ingred_column_two">
+            <div id="div3" class="clickable_div">
+              <h3>Grapefruit</h3>
+            </div>
+      
+            <div id="div4" class="clickable_div">
+              <h3>Alcohol</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- END (Ingredients Section - Section 5) //////////////////////////////////////// -->
+      
+      <!-- MADE IN HK ScrollTrigger =================== -->
+      <div class="section fp-auto-height">
+        <div class="keywords_container keywords_container_2">
+          <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+          </svg>
+
+          <p>MADE IN HONG KONG</p>
+
+          <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+          </svg>
+
+          <p>MADE IN HONG KONG</p>
+
+          <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+          </svg>
+
+          <p>MADE IN HONG KONG</p>
+
+          <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+          </svg>
+
+          <p>MADE IN HONG KONG</p>
+
+          <svg class="asterisk" width="3vw" height="3vw" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.7501 0.25V12.9673L27.7646 6.6095L29.5146 9.6405L18.5001 15.9982L29.5146 22.3595L27.7646 25.3905L16.7484 19.031V31.75H13.2484V19.031L2.23389 25.3905L0.483887 22.3595L11.4966 16L0.483887 9.6405L2.23389 6.6095L13.2501 12.9673V0.25H16.7501Z" fill="#FDB800"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- END (MADE IN HK ScrollTrigger) =================== -->
+
+<!-- About Section - Section 6 //////////////////////////////////////// -->
+      <div class="section section_six">
+        <div class="content">
+    <!-- NOTE: content containers removed from "about_section_content_container" due to swiper.js breaking with absolute positioning of that div -->
+          <div class="about_container" id="about_container_one">
+            <svg class="box" width="2vw" height="2vw" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="160" height="160" fill="#FDB800"/>
+            </svg>
+            <p>
+              At Homeshake, we see ourselves as an innovative beverage company. Our goal is to add a touch of cocktail excitement to your home, all
+              while redefining what you know about classic drinks.
+            </p>
+          </div>
+          <div class="about_container" id="about_container_two">       
+            <svg class="box" width="2vw" height="2vw" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="160" height="160" fill="#FDB800"/>
+            </svg>
+            <p>
+              Being awarded "Most Innovative Beverage Brand of the Year" at the Hong Kong Most Valuable Companies in 2021, we are
+              recognized as one of the pioneers in the Hong Kong wine industry.
+            </p>  
+          </div>
+
+        <div class="about_section_content_container">
+          <h3 class="about_heading">About us</h3>
+        </div>
+
+        <!-- Image Gallery =========== -->
+        <div class="img_gallery_container">
+          <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="./media/city_skyline.jpg" class=" swiper_img city_skyline" alt="Photograph of Hong Kong Buildingd">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./media/hs_vials.jpg" class="swiper_img city_night" alt="Photograph of Homeshake Cocktail Box">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./media/holding_tipsy_tea.jpeg" class="swiper_img tipsy_tea" alt="Photograph of Tipsy Lemon Tea Bottle Being Held">
+                </div>
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination"></div>
+      
+              <!-- navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+      
+              <!-- If I need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+          <!-- END (Image Gallery) =========== -->
+      </div>
+    </div>
+      <!-- END (About Section - Section 6) //////////////////////////////////////// -->
+      
+      <!-- Order - Section 7 //////////////////////////////////////// -->
+      <div class="section section_seven">
+        <div class="bg">
+          <sl-animation class="fade_two" name="fadeIn" easing="ease-in-out" duration="2000" iterations="1" >
+            <img class="grid_two" src="media/grid_two.png" alt="Background Grid">
+          </sl-animation>
+          <img class="quotations_two" src="media/quotations_two.png" alt="Background Grid">
+        </div>
+
+        <div class="order_content_container">
+          <div class="img_frame">
+            <img src="media/tipsy_bottle.png" class="order_tipsy_bottle" alt="Photograph of Tipsy Lemon Tea in Bottle">
+          </div>
+
+          <div class="order_written_content_container">
+            <p class="order_p">Elevate your moment with Tipsy<br> Lemon Tea. <span>Sip, savour, and enjoy!</span></p>
+            <sl-button class="order_btn" outline>Order Now</sl-button>
+          </div>
+        </div>
+      </div>
+
+
+<!-- END (Order Section - Section 7) //////////////////////////////////////// -->
+
+      <!-- Footer ============== -->
+      <div class="section fp-auto-height">
+        <div class="footer">
+          <div class="newsletter_form">
+            <h5>Stay Updated With Us</h5>
+            <sl-input class="email_input" placeholder="Enter email"></sl-input>
+            <sl-button class="subscribe_btn" outline>Subscribe to Newsletter</sl-button>
+          </div>
+        </div>
+      </div>
+      <!-- END (Footer) ============== -->
+    </div>
+    
+
+
+
+
+
+    <!-- Fullpage.js script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js" integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- GSAP script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ScrollTrigger-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Split Type -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- Shoelace script -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.10.0/cdn/shoelace-autoloader.js"></script>
+    <!-- Anime js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper CDN JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+     
+    <!-- Main js file -->
+    <script src="main.js"></script>
+  </body>
+
+
+
+ 

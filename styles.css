@@ -1,0 +1,1723 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* My Fonts ================================== */
+
+/* Heading Font */
+@font-face {
+    font-family: "Gefika";
+    src:url("./fonts/gefika.otf");
+}
+
+/* Body Font */
+
+@font-face {
+    font-family: "Metropolis_M";
+    src:url("./fonts/Metropolis-Medium.otf");
+}
+
+@font-face {
+    font-family: "Metropolis_R";
+    src:url("./fonts/Metropolis-Regular.otf");
+}
+
+/* Fullpage Settings  ===================== */
+
+#fp-nav ul li .fp-tooltip { /* temp */
+    color: black; 
+}
+
+/* END (Fullpage Settings)  ===================== */
+
+/* Opening Page Styling=========================================== */
+
+/* Opening Screen */
+.opening_section {
+    /* Positioning */
+    overflow: hidden;
+    position: fixed;
+    z-index: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    width: 100%;
+}
+
+/* Text container */ 
+.typing_container {
+    /* Aesthetics */
+    background: #1c1c1c;
+    font-family: "Gefika";
+
+    /* Positioning */
+    margin: 0; /* Reset */
+    overflow: hidden; /* box hiding text disappears*/
+    width: 17%; /* Ensuring text all starts at same point */
+}
+
+/* Text */
+.typing_container .text {
+    /* Positioning */
+    position: relative;
+    /* Aesthetics */
+    color: white;
+    font-size: 4vw;
+}
+
+
+.text.first_text:before { 
+    /* Positioning */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Aesthetics */
+    background-color: #1c1c1c; /* Box that hides text */
+    border-left: 2px solid white; /* type bar | */
+    animation: animate 4s steps(12) 3;
+    animation-play-state: running;
+}
+
+
+/* Typing Animation */
+@keyframes animate {
+    40%,60%{
+        left: calc(100% + 3%);
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+/* Black Background */
+.bg {
+    /* Positioning */
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* Aesthetics */
+    background-color: #1c1c1c;
+}
+
+/* END (Opening Page Styling) =========================================== */
+
+/* Navigation =================================================================== */
+
+/* Nav UL container */
+.navigation {
+    /* Positioning */
+    position: fixed;
+    z-index: 300;
+    right: 0;
+    text-align: right;
+    display: inline-block;
+}
+
+/* UL */
+.menu {
+    /* Positioning */
+    transition: all 0.2s;
+    margin:0;
+    padding: .5rem 0 .5rem 0;
+
+    /* Aesthetics */
+    list-style-type: none; /* getting rid of bullets */
+}
+
+/* SL Hamburger btn */
+.hamburger-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    z-index: 200;
+  }
+
+/* btn styling */
+.hamburger-btn::part(base) {
+    /* Aesthetics */
+    color: black;
+    font-size: 1.8em;
+    padding: 1rem;
+}
+
+/* List items */
+ul li {
+    /* Positioning */
+    margin: 2vh;
+}
+
+/* Navigation a */
+.nav_btn {
+    /* Positioning */
+    padding-right: 2vh;
+    padding: .5vw 2vh .5vw 2vw;
+
+    /* Aesthetics */
+    font-family: "Gefika";
+
+    /* Removing href styling */
+    text-decoration:none; 
+    color: black;
+    
+}
+
+/* Hover Animation */
+.nav_btn:hover {
+    /* Aesthetics */
+    color: #fDB800;
+    transition: .25s;
+}
+
+/* added class in JS */
+.nav_active { /* Aesthetics */ color: #FDB800;}
+
+/* added class in JS */
+.bg_active {
+/* Aesthetics */
+background-color: white;
+transition: 2s;
+}
+
+
+/* END (Navigation) =================================================================== */
+
+/* Section 1 (Hero Section) =========================================================== */
+
+/* Hero img container */
+.hero_img_container {
+    /* Positioning */
+    position:absolute;
+    top:0;
+    bottom: 0;
+    width: 45%;
+    height: 100vh;
+}
+
+/* Mask - For Animation */
+.mask {
+    /* Positioning */
+	visibility: hidden; /* Starts off hidden */
+    position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Hero img */
+#hero_img {
+    /* Positioning */
+    width: 100%;
+    height: 100%;
+
+    /* Aesthetics */
+    object-fit: cover;
+}
+
+/* Scrolling Text  ============= */
+
+
+/* - Code reference:
+Iskandar. n.d. Continuous infinite text loop. Codepen. 
+    https://codepen.io/iskadar/pen/zLQjLe. Accessed 10th October 2023.
+*/
+
+.scrolling_text_container {
+    /* Positioning */
+    position: absolute;
+    top: 43.5%;
+    left: 23%;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-90deg);
+    
+    width: 100vh; /* vh bc its rotated on its side*/
+    /* Aesthetics */
+    font-family: 'Gefika';
+    overflow: hidden;
+}
+
+/* Scroll Section 1 ------------------- */
+
+/* Scrolling text container */ 
+.scroll_container {
+    /* Positioning */
+    height: 6.5vh; /* Controls how close they are to each other bc of hiddden part */
+    width:100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+ }
+
+/* Contents of container */
+.cnnContents {
+    /* Positioning */
+    width:100%;
+    padding-top: 0px;
+    margin:0 auto;
+
+    /* Aesthetics */
+    font-size: 3.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: 'Gefika';
+    color: #FDB800;
+}
+
+/* Text line 1 */
+.marqueeStyle {
+    display:inline-block;
+    /* Apply animation to this element */
+    -webkit-animation: scrolling-left1 25s linear infinite;
+    animation: scrolling-left1 25s linear infinite;
+}
+
+/* Text line 2 */
+.marqueeStyle2 {
+    display:inline-block;
+    /* Apply animation to this element */
+    -webkit-animation: scrolling-left2 25s linear infinite;
+    animation: scrolling-left2 25s linear infinite;
+    animation-delay: 12.5s; /* 50% of above values ^^ */
+}
+
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+    0% {transform: translateX(100%);
+        -webkit-transform: translateX(100%);}
+    100% {transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);}
+}
+@keyframes scrolling-left2 {
+    0% {transform: translateX(0%);
+        -webkit-transform: translateX(0%);}
+    100% {transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);}
+}
+
+@-webkit-keyframes scrolling-left1 {
+    0% {-webkit-transform: translateX(100%);}
+    100% {-webkit-transform: translateX(-100%);}
+}
+@-webkit-keyframes scrolling-left2 {
+    0% {-webkit-transform: translateX(0%);}
+    100% {-webkit-transform: translateX(-200%);}
+}
+
+  /* Scroll Section 2 ------------------- */
+
+#scroll_two { /* Positioning */ transform: rotate(180deg); }
+
+/* (END) Scrolling Text =========  */
+
+/* Tipsy Bottle Image + hover interaction */
+.bottle_container {
+    /* Positioning */
+    text-align: right;
+    margin: 0 5rem 2rem 0;
+    height: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bottle img */
+.tipsy_bottle_img {
+    /* Positioning */
+    width: 40%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Order Now Button visible hover area */
+.hover_area {
+    /* Positioning */
+    position: absolute;
+    z-index: 100;
+    top: 30%;
+    right: 13.9%;
+    padding: 10vw 2vw 10vw 2vw;
+}
+
+/* Order Now btn */
+sl-button.order_btn_hero {
+    visibility: hidden;
+}
+
+/* END (Section 1 - Hero Section) =========================================================== */
+
+/* Section 2 (Quote Section) =========================================================== */
+
+/* Section Two */
+.section_two {
+    /* Positioning */
+    display: flex;
+    text-align: center; 
+    justify-content: center; /* vertical alignment */
+    align-items: center;
+}
+
+/* Background Grid */
+.grid {
+    /* Positioning */
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -100;
+    object-fit: cover;
+
+}
+/* Quotations */
+.quotations {
+    /* Positioning */
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -100;
+    object-fit: cover;
+
+}
+
+/* Quote Container */
+.quote {
+    /* Positioning */
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Stopping animation flicker on load */
+    visibility: hidden;
+}
+/* h2 (4 h2's) */
+h2 {
+    /* Positioning */
+    line-height: 3.6vw;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    margin: 1vw;
+    
+    /* Aesthetics */
+    font-family: "Gefika";
+    font-size: 4vw;
+}
+
+/* Yellow Text */
+h2 span {
+    /* Aesthetics */
+    color:#FDB800;
+}
+
+/* Split Text animation gets each character */
+.char {
+    transform: translateY(115px);
+    transition: transform .5s;
+}
+
+/* END (Section 2 - Quote Section) =========================================================== */
+
+/* Section 3 (Video Section) =========================================================== */
+
+/* Section 3 */
+.section_three {
+    /* Positioning */
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    width: 100vw;
+    vertical-align: top;
+}
+
+/* Video =================================== */
+
+/* Video container (for rectangular shape) */
+.video_container {
+    /* Positioning */
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    margin-bottom: 2vw;
+}
+
+/* Video */
+#video {
+    /* Positioning */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* END (Video) ============================== */
+
+/* Parallax scroll keywords ================== */
+
+.keywords_outer_wrapper {
+    /* Positioning */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Keywords container */
+.keywords_container {
+    /* Positioning */
+    width: 200%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  
+    /* Aesthetics */
+    font-family: "Gefika";
+}
+  
+/* Keywords */
+.keywords_container p {
+    /* Positioning */
+    margin: 0 2vw 0 2vw;
+  
+    /* Aesthetics */
+    font-size: 3.5rem;
+    color: #FDB800;
+}
+  
+  /* svg asterisks */
+.asterisk {
+    /* Positioning */
+    margin: 0 2vw 0 2vw;
+}
+  
+/* (END) Parallax scroll keywords ================== */
+
+/* END (Section 3 - Video Section) =========================================================== */
+
+/* Section 4 (Info Section) ================================================================== */
+
+/* Section 4 */
+.section_four {
+    /* Positioning */
+    display: flex;
+}
+
+/* 3 rows of info */ 
+.row {
+    /* Positioning */
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Stops animation from creating scroll overflow */
+}
+
+/* Info + svg container */
+.info_container {
+    /* Positioning */
+    display: flex;
+}
+  
+ /* Container 1 */ 
+.info_container_one {
+    /* Positioning */
+    margin-left: 8%;
+}
+ 
+/* Container 2 */  
+.info_container_two {
+    /* Positioning */
+    margin-left: 33%;
+}
+
+ /* Container 3 */ 
+.info_container_three {
+    /* Positioning */
+    height: 60%;
+    width: 50%;
+    margin-left: 62%;
+    padding-top: .2vh;
+}
+
+/* SVG */
+.square_point {
+    /* Positioning */
+    margin: .3vw 1.2vw 0 0;
+    padding: .2vw;
+}
+
+/* Paragraph text */ 
+.section_four p {
+    /* Positioning */
+    width: 35ch;
+    margin: 0;
+  
+    /* Aesthetics */
+    font-family: "Metropolis_R";
+    line-height: 1.2;
+}
+
+/* Bolded text */
+.info span {
+    font-family: "Metropolis_M";
+}
+/* Paragraph text in container 3 */
+.info_container_three p {
+    /* Positioning */
+    width: 35ch; /* Width was decreased automatically, resetting to 35ch */
+}
+
+/* Mask hiding p */
+.p_mask {
+    /* Positioning */
+    visibility: hidden; /* Starts off hidden */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* END (Section 4 - Info Section) ================================================================== */
+
+/* Section 5 (Ingredients Section) ================================================================== */
+
+/* Section 5 */
+.section_five {
+    /* Positioning */
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+/* Ingredients div container */
+.ingred_container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+/* Section 5 Heading 3 */
+.section_five h3 {
+    /* Aesthetics */
+    font-family: "Gefika";
+    font-size: 3vw;
+}
+
+/* Section 5 Heading 4 */
+.section_five h4 {
+    /* Positioning */
+    margin-top: 0;
+    margin-bottom: 2vw;
+
+    /* Aesthetics */
+    font-family: "Gefika";
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Paragraph text */
+.section_five p {
+    /* Positioning */
+    width: 50%;
+
+    /* Aesthetics */
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Metropolis_R";
+    line-height: 1.2;
+}
+
+.text_content {
+    /* Positioning */
+    width: 100%;
+    margin-left: 1.5vw;
+}
+
+/* Two Columns */
+.ingred_column_one { /* Positioning */ width: 50%; }
+
+.ingred_column_two { /* Positioning */ width: 50%; }
+
+/* Ingredients containers */
+.clickable_div {
+    /* Positioning */
+    margin: 0;
+    padding: 10px;
+    height: 50vh;
+    position: relative; /* For abosolute child element*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    /* Aesthetics */
+    cursor: pointer;
+    border: 1px solid #FDB800;
+    color: #FDB800;
+}
+
+/* Clickable div on hover */
+.clickable_div:hover {
+    /* Aesthetics */
+    background-color: #FDB800;
+    color: white;
+    transition: .4s;
+}
+
+/* Ingredient img */
+.clickable_div img {
+    /* Positioning */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Yellow Background */
+.shape {
+    /* Positioning */
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    /* Aesthetics */
+    background-color: #FDB800;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* END (Section 5 - Ingredients Section) ================================================================== */
+
+/* Made in HK scrolltrigger section ============== */
+.keywords_container_2 {
+    /* Positioning */
+    width: 300%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 1vw 0 1vw 0;
+  
+    /* Aesthetics */
+    font-family: "Gefika";
+}
+  
+/* Keywords */
+.keywords_container_2 p {
+    /* Positioning */
+    margin: 0 2vw 0 2vw;
+  
+    /* Aesthetics */
+    font-size: 3.5rem;
+    color: #FDB800;
+}
+  
+  /* svg asterisks */
+.asterisk {
+    /* Positioning */
+    margin: 0 2vw 0 2vw;
+}
+
+/* END (Made in HK scrolltrigger section) ============== */
+
+/* Section 6 - About us Section) ================================================================== */
+
+/* All of section six content container */
+.content {
+    /* Positioning */
+    display: flex;
+    visibility: hidden; /* Stops animation flickering */
+}
+
+/* Heading container */
+.about_section_content_container {
+    /* Positioning */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 70%;
+}
+
+/* Heading */
+.about_heading {
+    /* Positioning */
+    margin: 4vw 0vw 4vw 8vw;
+    width: 60%;
+
+    /* Aesthetics */ 
+    font-family: "Gefika";
+    color: #FDB800;
+    font-size: 3vw;
+}
+
+/* Box SVGs */ 
+.section_six .box {
+    /* Positioning */
+    margin: 0 3vw 0 2vw;
+}
+
+/* About containers */
+.about_container {
+    /* Positioning */
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    width: 40vw;
+    height: 30vh;
+    align-items: center;
+
+    /* Aesthetics */ 
+    background-color: white;
+}
+
+/* Container 1 */
+#about_container_one  {transform: translate(30%, 75%); }
+
+/* Container 2 */
+#about_container_two{transform: translate(50%, 200%); }
+
+/* Text */
+.about_container p {
+    /* Positioning */
+    width: 75%;
+
+    /* Aesthetics */
+    font-family: "Metropolis_R";
+    font-size: 1.3vw ;
+    line-height: 1.4;
+}
+
+/* Swiper starts here ===================== */
+
+/* Gallery container */
+.img_gallery_container {
+    /* Positioning */
+    height: 100vh;
+    width: 100%;
+    position: relative; /* ensures that absolute child stays inside parent */
+    margin: 0;
+    padding: 0;
+
+    visibility: initial; /* Set to initial visibility - this overrides visibility hidden */
+}
+
+/* Swiper */
+.swiper {
+    /* Positioning */
+    width: 100%;
+    height: 100vh;
+    position: absolute; /* stays inside parent */
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slides */
+.swiper-slide {
+    /* Positioning */
+    display:flex;
+}
+
+/* Images */
+.swiper_img {
+    /* Positioning */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+    /* Positioning */
+    height: 1vw;
+    width: 1vw;
+    margin: 0 10vw 0 3vw;
+
+    /* Aesthetics */
+    background-color: white;
+    opacity: 70%;
+    border-radius: 0%;
+    
+}
+
+/* Active Pagination */
+    .swiper-pagination-bullet-active { /* changing properties for the active bullet */
+    /* Aesthetics */
+    background-color: #FDB800;
+    opacity: 100%;
+}
+
+/* Swiper buttons */
+.swiper-button-next {
+    /* Positioning */
+    margin-right: 2vw;
+    padding: 1.5vw;
+    height: 2vw;
+
+    /* Aesthetics */
+    color: #FDB800;
+    background-color: white;
+    width: 2vw;
+    border-radius: 50%;
+}
+
+/* Changing icon size - needed to target :after */
+.swiper-button-next::after {
+    /* Aesthetics */
+    font-size: 1.4vw;
+}
+
+/* This button is invis */
+.swiper-button-prev { 
+    /* Positioning */
+    margin-right: 2vw;
+    padding: 1.5vw;
+    height: 2vw;
+
+    /* Aesthetics */
+    color: #FDB800;
+    background-color: white;
+    width: 2vw;
+    border-radius: 50%;
+    opacity: 0%;
+}
+
+.swiper-button-prev::after {
+    /* Aesthetics */
+    font-size: 1.4vw;
+}
+
+/* END (Swiper) ========================= */
+
+/* END (Section 6 - About us Section) ================================================================== */
+
+/* Section 7 - Order Now Section ================================================================== */
+
+/* Section Seven */
+.section_seven {
+    /* Positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+/* Background Grid */
+.grid_two {
+    /* Positioning */
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -100;
+    object-fit: cover;
+}
+
+/* Background Quotations */
+.quotations_two {
+    /* Positioning */
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -99;
+    object-fit: cover;
+}
+
+/* Bottle img container */
+.img_frame {
+    /* Positioning */
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bottle img */
+.order_tipsy_bottle {
+    /* Positioning */
+    width: 40vw;
+    object-fit: cover;
+}
+
+/* Order Now content container */
+.order_content_container {
+    /* Positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+
+    visibility: hidden; /* Stops animation flicker */
+}
+
+
+/* Order Now written content container */
+.order_written_content_container {
+    /* Positioning */
+    height: 20vh;
+    padding: 2vw 6vw 0 0;
+    margin-left: 1vw;
+}
+
+/* Order Now text */
+.order_written_content_container p {
+    /* Aesthetics */
+    font-family: "Metropolis_R";
+    line-height: 1.4;
+    font-size: clamp(1rem, 1.2vw + .12rem, 2rem);
+}
+
+/* Bolded Text*/ 
+.order_written_content_container span {/* Aesthetics */ font-family: "Metropolis_M"; }
+
+/* SL btn styling */
+sl-button.order_btn::part(base) {
+    /* Positioning */
+    margin-top: 1vw;
+
+    /* Aesthetics */
+    border-radius: 0;
+    border-color: #FDB800;
+    font-family: "Gefika";
+    font-size: clamp( 1rem, 1.5vw + .15rem, 1.5rem);
+    color: #FDB800;
+    transition: 2s var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+    padding: .6vw 1vw .6vw 1vw;
+}
+
+sl-button.order_btn::part(base):hover {
+    /* Aesthetics */
+    background-color: #FDB800;
+    color: white;
+}
+
+sl-button.order_btn::part(base):active {
+    /* Aesthetics */
+    background-color:#EEAE03;
+}
+
+/* END  (Section 7 - Order Section) ================================================================== */
+
+/* Footer  ================================================================== */
+
+/* Footer */
+.footer {
+    /* Positioning */
+    padding-bottom: 5em;
+    padding-top: 2em;
+
+    /* Aesthetics */
+    background-color: black;
+}
+
+/* Footer Heading */
+.footer h5 {
+    /* Positioning */
+    margin: 0 0 2vw 0;
+
+    /* Aesthetics */
+    font-family: "Gefika";
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* SL input field */
+sl-input.email_input::part(base) {
+    font-family: "Metropolis_R";
+    color: #EEAE03;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* SL button */
+sl-button.subscribe_btn::part(base) {
+    font-family: "Gefika";
+    width: 35vw;
+    font-size: 1rem;
+    border-radius: 0;
+    color: white;
+}
+
+sl-button.subscribe_btn::part(base):hover {
+    background-color: white;
+    color: black;
+}
+
+/* Newsletter container */
+.newsletter_form {
+    margin: 1rem 0 0 3rem;
+    width: 35vw;
+}
+
+/* END (Footer)  ================================================================== */
+
+
+/* Media Queries ================================================*/
+
+
+/* This is an iPad mini */
+    @media screen and (max-width: 1024px) and (max-height: 768px) {
+        /* This is a Tablet */
+        /* Menu ================== */
+        .hamburger-btn {
+            /* Positioning */
+            display: block;
+        }
+
+        .menu {
+            /* Positioning */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+
+            /* Aesthetics */
+            background: white;
+            opacity: 0;
+        }
+
+        .menu a {
+            /* Aesthetics */
+            font-size: 1.3em;
+        }
+
+        .menu.show {
+            /* Aesthetics */
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* END (Menu) ================== */
+
+        /* Hero Section ================ */
+
+        /* Scrolling text removed */
+        .scrolling_text_container {
+            /* Positioning */
+            display: none;
+        }
+
+        sl-button.order_btn_hero {
+            /* Positioning */
+            right: 5.4%;
+        }
+
+        .hover_area {
+            /* Positioning */
+            top: 33%;
+        }
+
+        /* END (Hero Section) ========== */
+
+        /* Scrub words */
+        .keywords_container p {
+            /* Aesthetics */
+            font-size: 2.5rem;
+        }
+        
+        /* Info Section ================= */
+        .info_container_two {
+            /* Positioning */
+            margin-left: 25%;
+        }
+
+        /* Container 3 */ 
+        .info_container_three {
+            /* Positioning */
+            margin-left: 50%;
+        }
+        /* END (Info Section) ================= */
+
+        /* Ingredients Section ========== */
+        .section_five h4 {
+            /* Aesthetics */
+            font-size: 2rem;
+        }
+
+        .section_five p {
+            /* Aesthetics */
+            font-size: 1rem;
+        }
+
+        /* END (Ingredients Section) ========== */
+
+        /* Order Section ====================== */
+        .quotations_two {
+            /* Aesthetics */
+            visibility: hidden;
+        }
+
+        /* END (Order Section) ====================== */
+
+    }
+
+/* This is an iPad mini */
+   @media only screen and (max-width: 768px) and (max-height: 1024px) {
+    /* This is an iPad mini */
+    /* Menu ================== */
+    .hamburger-btn {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: white;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .menu a {
+        font-size: 1.3em;
+    }
+
+    .menu.show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    /* END (Menu) ================== */
+    
+    /* Hero Section ============ */ 
+    .hero_img_container {
+        display: none;
+    }
+
+    .bottle_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+    }
+    .scrolling_text_container {
+        display: none;
+    }
+
+    .tipsy_bottle_img {
+        width:100%;
+        padding-right: 6vw;
+    }
+
+    .hover_area {
+        top: 80%;
+        right: 39.5%;
+        width: auto;
+    }
+
+    sl-button.order_btn_hero {
+        visibility: visible;
+        
+    }
+    /* END (Hero Section) ============ */ 
+    /* Quote Section ============ */ 
+
+        /* h2 (4 h2's) */
+    h2 {
+        /* Positioning */
+        line-height: 5.1vw;
+
+        /* Aesthetics */
+        font-size: 5.5vw;
+    }
+    /* END (Quote Section) ============ */ 
+    
+    /* Scrub Keywords ================= */
+    .keywords_container p {
+        font-size: 2rem;
+    }
+    /* END (Scrub Keywords) ============ */
+
+    /* Info Section ==================== */
+    .info_container {
+        margin: 0;
+    }
+
+    .info_container p {
+        width: 40ch;
+        margin-left: 1vw;
+        font-size: 1.4rem;
+    }
+    .info_container_three {
+        width: 100%;
+    }
+
+    .square_point {
+        width: 3em;
+    }
+
+    /* END (Info Section) ==================== */
+    /* Ingredients Section =================== */
+    .ingred_container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    }
+
+    .ingred_column {
+    width: 100%;
+    }
+
+    .section_five h3 {
+    font-size: 2rem;
+    }
+
+    .section_five h4 {
+    font-size: 1.2rem;
+    }
+
+    /* END (Ingredients Section) =================== */
+
+    /* About Us Section =================== */
+    .content {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .about_container {
+    position: relative;
+    width: 100%;
+        }
+
+    .about_container p {
+        font-size: 1.2rem;
+        width: 45ch;
+    }
+
+    #about_container_one  {
+        transform: translate(0, 0);
+        margin-top: 2vh;
+    }
+
+    #about_container_two{
+        transform: translate(0, 0);
+    }
+
+    .about_section_content_container {
+        display: none;
+    }
+
+    .img_gallery_container {
+        height: 50vh;
+        margin-top: 2vh;
+    }
+    .swiper {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+    }
+    /* Pagination */
+    .swiper-pagination-bullet {
+        /* Positioning */
+        height: 3vw;
+        width: 3vw;
+    }
+
+    /* Swiper buttons */
+    .swiper-button-next {
+        /* Positioning */
+        height: 10vw;
+        width: 10vw;
+    }
+
+    /* Changing icon size - needed to target :after */
+    .swiper-button-next::after {
+        /* Aesthetics */
+        font-size: 4vw;
+    }
+
+    /* This button is invis */
+    .swiper-button-prev { 
+        opacity: 100%;
+        height: 10vw;
+        width: 10vw;
+    }
+
+    .swiper-button-prev::after {
+        /* Aesthetics */
+        font-size: 4vw;
+    }
+    /* (END) About Us Section ============= */
+    /* Order Section ====================== */
+    .order_content_container {
+        flex-direction: column;
+        height: auto;
+     }
+
+     .img_frame {
+        width: auto;
+     }
+
+    .order_tipsy_bottle {
+        width: 80vw;
+    }
+
+    .order_written_content_container {
+        text-align: center;
+        padding: 0;
+    }
+     /* END (Order Section) ================ */
+     /* Footer  ============================ */
+    .newsletter_form {
+        width: 60%;
+        margin-left: 10vw;
+    }
+    .newsletter_form h5 {
+        font-size: 1.2rem;
+    }
+    sl-button.subscribe_btn::part(base) {
+        width: 100%;
+    }
+    sl-input.email_input::part(base) {
+        width: 97%;
+    }
+     /* END (Footer)  ====================== */
+
+    }
+
+/* This is an iPhone X */
+    @media only screen and (max-width: 375px) and (max-height: 720px) {
+        /* Nav Section ============= */
+        .menu a {
+            /* Aesthetics */
+            font-size: 1em;
+        }
+        /* END (Nav Section) ============= */
+
+        /* Hero Section ============ */ 
+        .hero_img_container {
+            /* Aesthetics */
+            display: none;
+        }
+
+        .bottle_container {
+            /* Positioning */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+        }
+        .scrolling_text_container {
+            /* Aesthetics */
+            display: none;
+        }
+
+        .tipsy_bottle_img {
+            /* Positioning */
+            width:100%;
+            padding-right: 6vw;
+        }
+
+        .hover_area {
+            /* Positioning */
+            top: 80%;
+            right: 27%;
+        }
+
+        sl-button.order_btn_hero {
+            /* Aesthetics */
+            visibility: visible;
+        }
+        /* END (Hero Section) ============ */ 
+
+        /* Quote Section ============ */ 
+
+        /* h2 (4 h2's) */
+        h2 {
+            /* Positioning */
+            line-height: 6.1vw;
+
+            /* Aesthetics */
+            font-size: 6.5vw;
+        }
+
+        /* END (Quote Section) ============ */ 
+
+        /* Scrub Keywords ================= */
+        .keywords_container p {
+            /* Aesthetics */
+            font-size: 1rem;
+        }
+        /* END (Scrub Keywords) ============ */
+
+        /* Info Section ==================== */
+        .info_container {
+            /* Positioning */
+            margin: 0;
+        }
+
+        .info_container p {
+            /* Positioning */
+            width: 28ch;
+            margin-left: 1vw;
+        }
+        .info_container_three {
+            /* Positioning */
+            width: 100%;
+        }
+
+        .square_point {
+            /* Positioning */
+            width: 3em;
+        }
+
+        /* END (Info Section) ==================== */
+            
+        /* Ingredients Section =================== */
+        .ingred_container {
+            /* Positioning */
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .ingred_column {
+            /* Positioning */
+            width: 100%;
+        }
+
+        .section_five h3 {
+            /* Aesthetics */
+            font-size: 2rem;
+        }
+
+        .section_five h4 {
+            /* Aesthetics */
+            font-size: 1.2rem;
+        }
+
+        /* END (Ingredients Section) =================== */
+
+        /* About Us Section =================== */
+        .content {
+            /* Positioning */
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about_container {
+            /* Positioning */
+            position: relative;
+            width: 100%;
+        }
+
+        .about_container p {
+            /* Positioning */
+            font-size: 1rem;
+            width: 28ch;
+        }
+        
+        #about_container_one  {
+            /* Positioning */
+            transform: translate(0, 0);
+            margin-top: 2vh;
+        }
+        
+        #about_container_two{
+            /* Positioning */
+            transform: translate(0, 0);
+        }
+
+        .about_section_content_container {
+            /* Positioning */
+            display: none;
+        }
+
+        .img_gallery_container {
+            /* Positioning */
+            height: 50vh;
+            margin-top: 2vh;
+        }
+        .swiper {
+            /* Positioning */
+            position: relative;
+            width: 100%;
+            height: 50vh;
+        }
+
+        /* Pagination */
+        .swiper-pagination-bullet {
+            /* Positioning */
+            height: 4vw;
+            width: 4vw;
+        }
+
+        /* Swiper buttons */
+        .swiper-button-next {
+            /* Positioning */
+            height: 10vw;
+            width: 10vw;
+        }
+
+        /* Changing icon size - needed to target :after */
+        .swiper-button-next::after {
+            /* Aesthetics */
+            font-size: 4vw;
+        }
+
+        /* This button is invis */
+        .swiper-button-prev { 
+            opacity: 100%;
+            height: 10vw;
+            width: 10vw;
+        }
+
+        .swiper-button-prev::after {
+            /* Aesthetics */
+            font-size: 4vw;
+        }
+        /* (END) About Us Section ============= */
+
+        /* Order Section ====================== */
+        .order_content_container {
+            /* Positioning */
+            flex-direction: column;
+        }
+
+        .img_frame {
+            /* Positioning */
+            height: 45vh;
+            width: auto;
+        }
+
+        .order_tipsy_bottle {
+            /* Positioning */
+            width: 80vw;
+        }
+
+        .order_written_content_container {
+            /* Positioning */
+            text-align: center;
+            padding: 0;
+        }
+        /* END (Order Section) ================ */
+
+        /* Footer  ============================ */
+        .newsletter_form {
+            /* Positioning */
+            width: 80%;
+            margin-left: 10vw;
+        }
+        .newsletter_form h5 {
+            /* Positioning */
+            font-size: 1.2rem;
+        }
+        sl-button.subscribe_btn::part(base) {
+            /* Positioning */
+            width: 100%;
+        }
+        sl-input.email_input::part(base) {
+            /* Positioning */
+            width: 97%;
+        }
+        /* END (Footer)  ====================== */
+    }
+
+/* iPhone XR */
+    @media only screen and (max-width: 414px) and (max-height: 896px) {
+        /* Hero Section ============ */ 
+        .hover_area {
+            /* Positioning */
+            top: 80%;
+            right: 31%;
+        }
+        /* END (Hero Section) ============ */ 
+        /* Scrub Keywords ================= */
+        .keywords_container p {
+            /* Aesthetics */
+            font-size: 1rem;
+        }
+        /* END (Scrub Keywords) ============ */
+        /* Info Section ==================== */
+        .info_container p {
+            /* Aesthetics */
+            width: 28ch;
+            font-size: 1rem;
+        }
+        /* END (Info Section) ==================== */
+        /* About Us Section =================== */
+        .about_container p {
+            /* Aesthetics */
+            font-size: 1rem;
+            width: 32ch;
+        }
+        /* END (About Us Section) =================== */
+    }
+
+/* Samsung S20 */ 
+    @media only screen and (max-width: 412px) and (max-height: 915px) {
+        /* Hero Section ============ */ 
+        .hover_area {
+            /* Positioning */
+            top: 80%;
+            right: 32%;
+        }
+        /* END (Hero Section) ====== */
+        /* Info Section ==================== */
+        .info_container p {
+            /* Aesthetics */
+            width: 25ch;
+            font-size: 1.1rem;
+        }
+        /* END (Info Section) ================ */
+        /* Scrub Keywords ================= */
+        .keywords_container p {
+            /* Aesthetics */
+            font-size: 1rem;
+        }
+        /* END (Scrub Keywords) ============ */
+        /* About Us Section =================== */
+        .about_container p {
+            /* Aesthetics */
+            font-size: 1.1rem;
+            width: 28ch;
+        }
+        /* END (About Us Section) =================== */
+    }
+
